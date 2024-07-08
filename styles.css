@@ -1,0 +1,147 @@
+header {
+    background-color: rgb(221, 160, 170);
+    padding: 5px; 
+    text-align: center;
+    /* header remains fixed when scrolling */
+    position: fixed; 
+    width: 100%; 
+    /* ensure headers appears above other elements that have a position trait so they don't overlap */ 
+    z-index: 1;
+    /* aligns it at top and left of the viewport */
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    color: rgb(133, 87, 87);
+    /* block level elements always start on a new line and takes up full width available 
+    inline doesn't, takes up as much width as necessary
+    inline-block: element is formatted as inline, but can apply height and width values */
+    display: inline-block;
+    border: 1px solid rgb(133, 87, 87); 
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 27px;
+}
+
+.banner {
+    /* any child elements w/ position: absolute will be positioned relative to this .banner element */ 
+    position: relative;
+    width: 100%; 
+    height: 500px; 
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .welcome {
+    background-color: rgb(230, 210, 185);
+    color: rgb(133, 87, 87);
+    padding: 20px;
+    position: absolute;
+    top: 26%; 
+    left: 4%;
+}
+
+.welcome h2 {
+    font-size: 45px;
+}
+
+nav {
+    background-color: #ebebeb;
+    margin-top: 2px;
+    padding: 20px;
+    /* stick positions relative until it meets a certain point then it sticks to viewport */
+    position: sticky;
+    top: 96px; 
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+    width: 25%;
+    font-size: 27px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+nav li a.Subscribe {
+    color: rgb(133, 87, 87);
+}
+
+main {
+    /* width and height now include border and padding */
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 1200px; 
+    padding: 0 40px; 
+    margin: 80px auto;
+}
+
+article h2 {
+    color: rgb(133, 87, 87);
+    font-size: 40px;
+}
+
+article p {
+    line-height: 2em;
+    color: #4b4b4b;
+}
+
+.images {
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+
+.images li {
+    display: inline-block;
+    width: 40%;
+    margin: 5px 5%; 
+}
+
+.images li img {
+    max-width: 100%;
+    width: 200px;
+    height: 300px;
+}
+
+section.join {
+    background: #ebebeb;
+    text-align: center;
+    padding: 60px 20px;
+    color:#4b4b4b;
+}
+
+.join h2 {
+    font-size: 27px;
+}
+
+form input {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 4px solid white;
+}
+
+footer {
+    background-color: rgb(221, 160, 170);
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+/* pseudo classes */ 
+
