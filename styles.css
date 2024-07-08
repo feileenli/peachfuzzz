@@ -69,7 +69,7 @@ nav ul {
 nav li {
     display: inline-block;
     width: 25%;
-    font-size: 27px;
+    font-size: 25px;
 }
 
 nav li a {
@@ -126,7 +126,7 @@ section.join {
 }
 
 .join h2 {
-    font-size: 27px;
+    font-size: 25px;
 }
 
 form input {
@@ -145,3 +145,63 @@ footer {
 
 /* pseudo classes */ 
 
+nav li a:hover {
+    background-color: pink;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+ul li img:hover {
+    position: relative; 
+    top: -8px; 
+}
+
+form input:focus {
+    outline: none;
+    border: 3px solid pink;
+}
+
+form input:valid {
+    border: 3px solid rgb(167, 210, 167);
+}
+
+/* responsive styles, typically you should begin w/ mobile web dev, then increase to bigger screens */ 
+
+@media screen and (max-width: 900px) {
+    .banner .welcome {
+        padding: 10px;
+    }
+
+    .banner .welcome h2 {
+        font-size: 38px;
+    }
+
+    nav li {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner .welcome {
+        padding: 5px;
+    }
+    .banner .welcome h2 {
+        font-size: 30px;
+    }
+    nav li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav li {
+        display: block;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .banner .welcome {
+        position: relative;
+    }
+}
